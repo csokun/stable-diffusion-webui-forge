@@ -11,7 +11,7 @@ services:
     # start in sleep mode
     # command: ["sleep", "infinity"]
     environment:
-      - CMDARGS=--listen # Arguments for launch.py.
+      - CMDARGS=--listen --enable-insecure-extension-access --pin-shared-memory --cuda-malloc --cuda-stream # Arguments for launch.py.
     volumes:
       - sd-web-ui-data:/content/data
       - ./repositories:/content/app/repositories
