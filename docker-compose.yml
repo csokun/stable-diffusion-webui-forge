@@ -5,16 +5,19 @@ services:
   app:
     build: .
     image: sd-web-ui
-    restart: always
+    # restart: always
     ports:
       - "7861:7860"
+    # start in sleep mode
+    # command: ["sleep", "infinity"]
     environment:
       - CMDARGS=--listen # Arguments for launch.py.
     volumes:
       - sd-web-ui-data:/content/data
       - ./repositories:/content/app/repositories
+      - ./outputs:/import/outputs
+      - ./webui-user.sh:/content/app/webui-user.sh
       #- ./models:/import/models   # Once you import files, you don't need to mount again.
-      #- ./outputs:/import/outputs  # Once you import files, you don't need to mount again.
     tty: true
     deploy:
       resources:

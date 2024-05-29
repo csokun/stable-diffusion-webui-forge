@@ -26,9 +26,13 @@ resize-right
 safetensors
 scikit-image>=0.19
 tomesd
+
 torch
+torchvision==0.16.0
 torchdiffeq
 torchsde
+
 transformers==4.30.2
 
 insightface
+onnxruntime==1.16.3
