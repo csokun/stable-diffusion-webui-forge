@@ -24,6 +24,13 @@ mklink models
 # Import old files
 import models
 
+# extensions
+mklink extensions
+# Copy original files
+(cd $ORIGINALDIR/extensions.org && cp -Rpn . $ORIGINALDIR/extensions/)
+# Import old files
+import extensions
+
 # outputs
 mklink outputs
 # Import old files

@@ -36,4 +36,4 @@ transformers==4.30.2
 
 insightface
 onnxruntime==1.16.3
-onnxruntime-gpu=1.18.0
+onnxruntime-gpu==1.18.0

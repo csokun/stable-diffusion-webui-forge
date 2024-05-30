@@ -25,6 +25,7 @@ USER user
 
 COPY --chown=user:user . /content/app 
 RUN mv /content/app/models /content/app/models.org
+RUN mv /content/app/extensions /content/app/extensions.org
 
 CMD [ "sh", "-c", "/content/entrypoint.sh ${CMDARGS}" ]
 	
