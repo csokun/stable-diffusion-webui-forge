@@ -5,13 +5,12 @@ services:
     restart: unless-stopped
     ports:
       - "7861:7860"
-    command: [ "sleep", "infinity"]
+    command: ["./run.sh"]
     environment:
-      - CMDARGS=--listen --enable-insecure-extension-access --pin-shared-memory --cuda-malloc --cuda-stream # Arguments for launch.py.
+      - CMDARGS=--listen --medvram-sdxl --xformers --enable-insecure-extension-access --pin-shared-memory --cuda-malloc --cuda-stream # Arguments for launch.py.
     volumes:
       - ./webui-user.sh:/app/webui-user.sh
       - ./repositories:/app/repositories
-      - ./outputs:/app/outputs:rw
       - ./extensions:/app/extensions
       - ./models:/app/models
     tty: true

@@ -8,6 +8,9 @@ RUN apt-get install -y curl wget libgl1 libglib2.0-0 python3-pip python-is-pytho
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
 
+# perftools
+RUN apt-get update && apt-get install --no-install-recommends -y google-perftools
+
 COPY requirements_versions.txt requirements.txt /tmp/
 RUN --mount=type=cache,target=/root/.cache \
 	pip install -r /tmp/requirements_versions.txt -r /tmp/requirements.txt

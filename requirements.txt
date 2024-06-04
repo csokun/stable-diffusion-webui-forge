@@ -14,7 +14,6 @@ kornia
 lark
 numpy
 omegaconf
-clip
 open-clip-torch
 
 piexif
@@ -26,41 +25,21 @@ resize-right
 safetensors
 scikit-image>=0.19
 tomesd
-
 torch
-torchvision==0.16.0
 torchdiffeq
 torchsde
 
-transformers==4.30.2
+clip
 
-insightface
-onnxruntime==1.16.3
-onnxruntime-gpu==1.18.0
-
-rembg
-wget
-
-mediapipe
-
-# CivitAI Browser+
-pysocks
-ZipUnicode
+#CivitAI
 send2trash
+ZipUnicode
+bs4
+pysocks
 beautifulsoup4
 
-tqdm
-numexpr
-mutagen
-imageio_ffmpeg
-av
-decorator
-imageio
-moviepy
+# ControlNet
+rich
 
-webencodings
-tinycss2
-reportlab
-lxml
-cssselect2
-svglib
+#ADetailer
+ultralytics
