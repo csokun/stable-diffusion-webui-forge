@@ -16,7 +16,7 @@ RUN --mount=type=cache,target=/root/.cache \
 	pip install -r /tmp/requirements_versions.txt -r /tmp/requirements.txt
 
 RUN --mount=type=cache,target=/root/.cache \
-	pip install xformers==0.0.20 --no-dependencies
+	pip install -U xformers --index-url https://download.pytorch.org/whl/cu121
 
 RUN curl -fsL -o /usr/local/lib/python3.10/dist-packages/gradio/frpc_linux_amd64_v0.2 https://cdn-media.huggingface.co/frpc-gradio-0.2/frpc_linux_amd64 && \
 	chmod +x /usr/local/lib/python3.10/dist-packages/gradio/frpc_linux_amd64_v0.2

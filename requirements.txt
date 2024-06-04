@@ -14,7 +14,6 @@ kornia
 lark
 numpy
 omegaconf
-open-clip-torch
 
 piexif
 psutil
@@ -43,3 +42,6 @@ rich
 
 #ADetailer
 ultralytics
+
+fvcore
+mediapipe>=0.10.13
